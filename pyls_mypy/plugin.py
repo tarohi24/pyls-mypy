@@ -27,7 +27,7 @@ def parse_line(line, document=None):
                 return None
 
         lineno = int(lineno or 1) - 1  # 0-based line number
-        offset = int(offset or 1) - 1  # 0-based offset
+        offset = int(offset or 1) - 2  # 0-based offset
         errno = 2
         if severity == 'error':
             errno = 1
