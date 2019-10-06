@@ -62,6 +62,7 @@ def pyls_lint(config, workspace, document, is_saved):
                 '--command', document.source]
     elif is_saved:
         args = ['--incremental',
+                '--ignore-missing-imports',
                 '--show-column-numbers',
                 '--follow-imports', 'silent',
                 document.path]
