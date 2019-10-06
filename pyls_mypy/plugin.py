@@ -69,9 +69,6 @@ def pyls_lint(config, workspace, document, is_saved):
         return []
 
     report, errors, _ = mypy_api.run(args)
-    with open('/home/hirota/docsim/log.txt', 'a') as fout:
-        fout.write(report)
-        fout.write(errors)
 
     diagnostics = []
     for line in report.splitlines():
