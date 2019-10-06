@@ -19,7 +19,7 @@ setup(
     long_description=README,
 
     # The project's main homepage.
-    url='https://github.com/tomv564/pyls-mypy',
+    url='https://github.com/taorhi24/pyls-mypy',
 
     author='Tom van Ommeren',
 
