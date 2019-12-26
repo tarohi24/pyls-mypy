@@ -1,5 +1,6 @@
 import re
 import logging
+import os
 from mypy import api as mypy_api
 from pyls import hookimpl
 
@@ -62,7 +63,8 @@ def pyls_lint(config, workspace, document, is_saved):
                 '--command', document.source]
     elif is_saved:
         args = ['--incremental',
-                '--ignore-missing-imports',
+                '--config-file',
+                os.environ['MYPY_CONFIG'],
                 '--show-column-numbers',
                 document.path]
     else:
